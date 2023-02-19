@@ -13,7 +13,9 @@ body {
     background-color: var(--body-bg-color);
     color: var(--main-text-color);
     font-family: 'Roboto', sans-serif;
-
+ /* width:1440px;
+ margin-left: auto;
+ margin-right: auto; */
 }
 
 .container{
@@ -134,10 +136,12 @@ margin: 0;
 color:var(--body-bg-color);
 cursor: pointer;
 border-color: transparent;
+box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .portfolio-button:focus{ background-color: var(--hover-color);
     color: var(--body-bg-color);
     border-color: transparent;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 
 }
 .portfolio-images-list{ display: flex;
@@ -169,8 +173,11 @@ border-color: transparent;
         margin: 0;
 }
 .images-item{
-    flex-basis:calc(( 100% - 48px)/3);
-}
+    flex-basis:calc(( 100% - 48px)/3);}
+    .images-item:hover{box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+
+    }
+
 .border-card{
     border-right: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
@@ -214,12 +221,69 @@ margin-right: auto;}
 
 
 
+ .footer-social-media{
+    margin-left:120px;
+ }
+.footer-social-tittle{
+    font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height:1.5;
+        letter-spacing: 0.02em;
+        color: var(--body-bg-color);
+        margin: 0;
+       
+       
+}
+
+.footer-container{
+    display: flex;
+}
+.footer-social-list{
+    display:flex;
+    padding: 0;
+    margin-top: 16px;
+    margin-bottom: 0;
+    list-style: none;
+    
+
+}
+.footer-social-item{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.1);
+        padding:8px;
+        fill: #F4F4FD;
+}
+.footer-social-item:not(:last-child){
+margin-right:16px;
+}
+
+
+
+
+
 /* Hero Section */
 
 .hero-section{background: var(--second-background-color);
     text-align: center;
-padding-top:188px;
-padding-bottom: 188px;
+/* padding-top:188px;
+padding-bottom: 188px; */
+
+}
+.overlay{
+    background-image:linear-gradient( to right,rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
+
+
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 1440px;
+        height: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 188px;
+      
 }
 .hero-title{
     font-weight: 700;
@@ -248,6 +312,16 @@ margin:0 auto;
 
 /* Main Section */
 
+.thumb{
+   
+    background-color:#F4F4FD;
+    border-radius: 4px;
+    height: 112px;
+    text-align: center;
+   padding-top: 24px;
+}
+  
+ 
 
 .main-list{list-style: none;
 display: flex;
@@ -353,6 +427,37 @@ margin-right: 24px;
     max-width: 100%;
     height: auto;
 }
+.social-list{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin-top: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    
+    
+}
+.social-item{
+ width: 40px;
+ height: 40px;
+border-radius: 50%;
+    background-color: var(--brand-color);
+    padding-top:12px;
+    fill:#F4F4FD;
+}
+.social-item:not(:last-child){
+    margin-right:24px;
+}
+.icon-instagram{fill:#F4F4FD;
+}
+.icon-twitter {
+    fill: #F4F4FD;
+}.icon-facebook {
+    fill: #F4F4FD;
+}.icon-linkedin{
+    fill: #F4F4FD;
+}
 .card-title{margin-top: 32px;
     margin-bottom: 0;
 
@@ -378,4 +483,48 @@ position: absolute;
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
     margin: -1px;
+}
+/* CUSTOMERS SECTION */
+.customers-section{
+    padding-top: 130px;
+    padding-bottom: 120px;
+}
+.customers-tittle{
+    font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height:1.11;
+        letter-spacing: 0.02em;
+        color: var(--main-text-color);
+        text-align: center;
+        margin: 0;
+}
+.customers-list{
+    display: flex;
+    list-style: none;
+    margin-top: 72px;
+    padding: 0;
+}
+.customers-item{
+    border: 1px solid #8E8F99;
+    border-radius: 4px;
+    height: 88px;
+    width: 168px;
+    
+}
+.customers-item:not(:last-child){
+    margin-right: 24px;
+}
+.customer-icon{
+    margin: 16px 32px;
+    fill: #AFB1B8;
+}
+.social-tittle{
+    font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: var(--body-bg-color);
 }
